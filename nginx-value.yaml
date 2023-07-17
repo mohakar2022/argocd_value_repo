@@ -120,7 +120,7 @@ extraEnvVarsSecret: ""
 
 ## @param replicaCount Number of NGINX replicas to deploy
 ##
-replicaCount: 5
+replicaCount: 1
 ## @param revisionHistoryLimit The number of old history to retain to allow rollback
 ##
 revisionHistoryLimit: 10
@@ -136,7 +136,7 @@ updateStrategy:
 ##
 podLabels: {
 	deployed: argocd-local,
-	release-tag: nginx-replica-5 }
+	release-tag: nginx-replica-1 }
 ## @param podAnnotations Annotations for NGINX pods
 ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
 ##
