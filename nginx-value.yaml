@@ -134,7 +134,9 @@ updateStrategy:
 ## @param podLabels Additional labels for NGINX pods
 ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 ##
-podLabels: {}
+podLabels: {
+	deployed: argocd-local,
+	release-tag: nginx-replica-5 }
 ## @param podAnnotations Annotations for NGINX pods
 ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
 ##
