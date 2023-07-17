@@ -158,7 +158,7 @@ server:
 
   ## External URL which can access prometheus
   ## Maybe same with Ingress host name
-  baseURL: ""
+  baseURL: "http://karim.com"
 
   ## Additional server container environment variables
   ##
