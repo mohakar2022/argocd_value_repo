@@ -140,9 +140,18 @@ podLabels: {
 	appName: pta-billing,
 	version: v1,
 	appSystem: yourSystem,
-	revisionHistoryLimit: "2",
+	revisionHistoryLimit: 2,
 	appVersion: 0.0.1,
-	gitCommit: XXXXX }
+	gitCommit: XXXXX,
+	env: dev,
+	release: alpha,
+	tier: backend,
+	country: hkg,
+	budev: eng,
+	bu: ato,
+	track: buy,
+	costcenter: 2953,
+	pxxdata: pii }
 ## @param podAnnotations Annotations for NGINX pods
 ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
 ##
