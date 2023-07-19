@@ -136,7 +136,13 @@ updateStrategy:
 ##
 podLabels: {
 	deployed: argocd-local,
-	release-tag: nginx-replica-1 }
+	release-tag: nginx-replica-1,
+	appName: pta-billing,
+	version: v1,
+	appSystem: yourSystem,
+	revisionHistoryLimit: "2",
+	appVersion: 0.0.1,
+	gitCommit: XXXXX }
 ## @param podAnnotations Annotations for NGINX pods
 ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
 ##
