@@ -135,6 +135,7 @@ updateStrategy:
 ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
 ##
 podLabels: {
+	app: CD,
 	deployed: argocd-local,
 	release-tag: nginx-replica-1,
 	appName: pta-billing,
