@@ -7,11 +7,11 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      svc_name: reviews
+      app: reviews
   template:
     metadata:
       labels:
-        svc_name: reviews
+        app: reviews
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
