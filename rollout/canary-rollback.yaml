@@ -13,8 +13,8 @@ spec:
             - primary                 # optional if there is a single route in VirtualService, required otherwise
           destinationRule:
             name: review-destination    # required
-            canarySubsetName: v1  # required
-            stableSubsetName: v2  # required
+            canarySubsetName: canary  # required
+            stableSubsetName: stable  # required
       steps:
       - setWeight: 90
       - pause:
