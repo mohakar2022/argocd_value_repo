@@ -3,8 +3,6 @@ kind: Rollout
 metadata:
   name: rollout-canary
 spec:
-  replicas: 2
-  revisionHistoryLimit: 2
   strategy:
     canary:
       trafficRouting:
