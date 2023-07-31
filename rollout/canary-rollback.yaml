@@ -3,7 +3,6 @@ kind: Rollout
 metadata:
   name: rollout-canary
 spec:
-  ...
   strategy:
     canary:
       trafficRouting:
