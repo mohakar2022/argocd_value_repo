@@ -16,7 +16,7 @@ spec:
       serviceAccountName: bookinfo-reviews
       containers:
       - name: reviews
-        image: docker.io/istio/examples-bookinfo-reviews-v2:1.17.0
+        image: docker.io/istio/examples-bookinfo-reviews-v1:1.17.0
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR
@@ -41,8 +41,6 @@ spec:
         istio:
           virtualService:
             name: reviews   
-            routes:
-            - primary                 # optional if there is a single route in VirtualService, required otherwise
           destinationRule:
             name: review-destination 
             canarySubsetName: canary
