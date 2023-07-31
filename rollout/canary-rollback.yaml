@@ -3,6 +3,11 @@ kind: Rollout
 metadata:
   name: rollout-canary
 spec:
+  replicas: 2
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: reviews
   strategy:
     canary:
       trafficRouting:
@@ -16,6 +21,6 @@ spec:
             canarySubsetName: v1  # required
             stableSubsetName: v2  # required
       steps:
-      - setWeight: 100
+      - setWeight: 90
       - pause:
           duration: 10m
