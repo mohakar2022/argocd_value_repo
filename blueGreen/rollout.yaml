@@ -38,6 +38,6 @@ spec:
   strategy:
   strategy:
     blueGreen: 
-      activeService: review-active
-      previewService: review-passive
+      activeService: reviews-active
+      previewService: reviews-passive
       autoPromotionEnabled: false
