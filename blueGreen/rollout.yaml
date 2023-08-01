@@ -36,16 +36,8 @@ spec:
       - name: tmp
         emptyDir: {}
   strategy:
-    canary:
-      trafficRouting:
-        istio:
-          virtualService:
-            name: reviews   
-          destinationRule:
-            name: review-destination 
-            canarySubsetName: canary
-            stableSubsetName: stable
-      steps:
-      - setWeight: 50
-      - pause:
-          duration: 10m 
+  strategy:
+    blueGreen: 
+      activeService: review-active
+      previewService: review-passive
+      autoPromotionEnabled: false
