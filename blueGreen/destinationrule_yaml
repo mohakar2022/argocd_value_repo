@@ -1,0 +1,12 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: review-destination
+  namespace: default
+spec:
+  host: reviews
+  subsets:
+  - labels:
+    name: stable
+  - labels:
+    name: canary

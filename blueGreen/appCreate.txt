@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: canary-deployment-demo
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: blueGreen
+    repoURL: 'https://github.com/mohakar2022/argocd_value_repo.git'
+    targetRevision: HEAD
+  sources: []
+  project: default
