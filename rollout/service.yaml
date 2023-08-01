@@ -95,10 +95,3 @@ spec:
     name: http
   selector:
     app: productpage
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: bookinfo-productpage
-  labels:
-    account: productpage
