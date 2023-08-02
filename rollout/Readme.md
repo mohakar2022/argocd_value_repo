@@ -2,7 +2,6 @@ ArgoCD Rollout :
 1. How its works : https://argoproj.github.io/argo-rollouts/#how-does-it-work
 2. Rollout Specification : https://argoproj.github.io/argo-rollouts/features/specification/
 
-
 Install Canary Deployment 
 ArgoCD UI : NewApp > 
 cat appCreate.txt | pbcopy
@@ -21,7 +20,16 @@ Full promote from UI
 
 
 # Cleanup Canary Deployment 
-
 k delete application -n argocd canary-deployment-demo
-k delete all --all -n default
 k delete rollout rollout-canary
+k delete all --all -n default
+k delete virtualservice --all
+k delete destinationrule --all
+
+k get gateway
+k get virtualservice
+k get service
+k get deployment
+k get replicaset
+k get destinationrule
+k get application -n argocd
