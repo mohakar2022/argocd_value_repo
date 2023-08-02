@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: rollout-canary
+spec:
+  strategy:
+    canary:
+      trafficRouting:
+        istio:
+          virtualService:
+            name: reviews   
+            routes:
+            - primary                 # optional if there is a single route in VirtualService, required otherwise
+          destinationRule:
+            name: review-destination    # required
+            canarySubsetName: canary  # required
+            stableSubsetName: stable  # required
+      steps:
+      - setWeight: 90
+      - pause:
+          duration: 10m
