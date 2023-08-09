@@ -13,10 +13,11 @@ Access Application : http://localhost:8081/productpage
 Change rollout.yaml Image version 
 git add . && git commit -m "U" && git push
 Argocd UI sync
+
 Check application : http://localhost:8081/productpage
+kubectl port-forward --namespace default svc/productpage 8081:9080
 
-kubectl argo rollouts get rollout rollout-canary
-
+kubectl argo rollouts get rollout rollout-bluegreen
 
 k delete application -n argocd bluegreen-deployment-demo
 k delete rollout rollout-bluegreen
