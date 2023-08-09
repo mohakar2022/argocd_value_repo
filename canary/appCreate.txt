@@ -6,7 +6,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/mohakar2022/argocd_value_repo.git'
-    path: rollout
+    path: canary
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
